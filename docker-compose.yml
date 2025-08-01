@@ -1,0 +1,23 @@
+
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - HF_API_TOKEN=${HF_API_TOKEN}
+    volumes:
+      - ./scripts/distilbert-phish:/app/distilbert-phish  # Optional: use volume instead of COPY in Dockerfile
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:80"
+
