@@ -1,3 +1,5 @@
 scripts/distilbert-phish/* filter=lfs diff=lfs merge=lfs -text
 scripts/distilbert-phish/model.safetensors filter=lfs diff=lfs merge=lfs -text
 data/Train/*.txt filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.txt filter=lfs diff=lfs merge=lfs -text
