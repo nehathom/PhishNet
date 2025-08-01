@@ -32,8 +32,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load tokenizer and model
-model_path = "/Users/nehathomas/Desktop/FishNet/scripts/distilbert-phish"
+model_path = "distilbert-phish"  # relative to /app
 tokenizer = DistilBertTokenizerFast.from_pretrained(model_path)
 model = DistilBertForSequenceClassification.from_pretrained(model_path)
 model.eval()

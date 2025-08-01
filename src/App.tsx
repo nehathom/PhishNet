@@ -25,7 +25,7 @@ function App() {
 
     } catch (error) {
       console.error('Error:', error);
-      setResult("An error occurred while connecting to the server.",error);
+      setResult(`An error occurred while connecting to the server. ${error}`);
 
     }
   };
