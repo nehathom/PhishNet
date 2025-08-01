@@ -10,3 +10,4 @@ dist
 data/Train/
 
 
+scripts/distilbert-phish/model.safetensors
